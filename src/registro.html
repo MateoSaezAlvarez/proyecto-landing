@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/estilos.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <title>Inscripción - CodeCraft</title>
+</head>
+<body class="bg-black font-['Plus_Jakarta_Sans'] min-h-screen flex flex-col">
+  <header class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
+    <nav class="flex justify-between items-center p-4 max-w-7xl mx-auto relative">
+      <a href="./landing.html" class="text-white font-bold text-2xl tracking-tight">CodeCraft</a>
+      
+      <input type="checkbox" id="menu-toggle" class="peer hidden">
+
+      <!-- Hamburger Label (Open) -->
+      <label for="menu-toggle" class="md:hidden text-white cursor-pointer select-none peer-checked:hidden transition-transform">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </label>
+
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex space-x-8 text-gray-300 font-medium items-center">
+        <li><a href="./landing.html" class="hover:text-white transition">Inicio</a></li>
+        <li><a href="#" class="hover:text-white transition">Acerca de</a></li>
+      </ul>
+
+      <!-- Mobile Menu (Full Screen) -->
+      <div id="mobile-menu" class="fixed inset-0 h-screen w-screen bg-black transition-transform duration-500 ease-in-out translate-y-[-100%] peer-checked:translate-y-0 flex flex-col items-center justify-center p-8 md:hidden z-60">
+        <label for="menu-toggle" class="absolute top-4 right-4 text-white cursor-pointer select-none">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </label>
+        
+        <ul class="flex flex-col space-y-8 w-full max-w-xs text-center">
+          <li><a href="./landing.html" class="block w-full py-5 text-white border-2 border-white rounded-full font-bold text-lg">Inicio</a></li>
+          <li><a href="#" class="block w-full py-5 text-white border-2 border-white rounded-full font-bold text-lg">Acerca de</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="flex-grow pt-32 pb-20 px-4">
+    <div class="max-w-xl mx-auto bg-gray-950 p-8 md:p-12 rounded-3xl border border-gray-800 shadow-2xl">
+      <div class="text-center mb-10">
+        <h1 class="text-white text-4xl font-bold mb-4">Empieza tu viaje</h1>
+        <p class="text-gray-400">Completa el formulario para acceder al curso de CSS más completo.</p>
+      </div>
+
+      <form class="space-y-6">
+        <div>
+          <label class="block text-gray-300 font-medium mb-2">Nombre completo</label>
+          <input type="text" placeholder="Tu nombre" class="w-full bg-gray-900 border border-gray-800 rounded-xl py-4 px-6 text-white focus:outline-none focus:border-white transition-colors">
+        </div>
+        
+        <div>
+          <label class="block text-gray-300 font-medium mb-2">Correo electrónico</label>
+          <input type="email" placeholder="email@ejemplo.com" class="w-full bg-gray-900 border border-gray-800 rounded-xl py-4 px-6 text-white focus:outline-none focus:border-white transition-colors">
+        </div>
+
+        <div>
+           <label class="block text-gray-300 font-medium mb-2">Nivel de experiencia</label>
+           <select class="w-full bg-gray-900 border border-gray-800 rounded-xl py-4 px-6 text-white focus:outline-none focus:border-white transition-colors appearance-none">
+             <option>Principiante</option>
+             <option>Intermedio</option>
+             <option>Avanzado</option>
+           </select>
+        </div>
+
+        <button type="submit" class="w-full bg-white text-black font-bold py-5 rounded-full hover:scale-[1.02] transition-transform shadow-xl shadow-white/5 mt-8">
+          Enviar registro
+        </button>
+      </form>
+    </div>
+  </main>
+
+  <footer class="text-gray-400 border-t border-white/10 py-12 mt-6">
+    <div class="max-w-7xl mx-auto flex flex-col items-center gap-6">
+      <div class="flex flex-wrap justify-center gap-6 text-gray-400 text-sm px-4">
+        <ul class="flex flex-wrap justify-center gap-6">
+          <li><a href="#" class="hover:text-white transition">Términos</a></li>
+          <li><a href="#" class="hover:text-white transition">Privacidad</a></li>
+          <li><p>Contáctanos</p></li>
+        </ul>
+      </div>
+      <p class="text-xs">© 2026 Proyecto Landing. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>

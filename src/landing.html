@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/estilos.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <title>Document</title>
+</head>
+<body class="bg-black font-['Plus_Jakarta_Sans']">
+  <header class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
+    <nav class="flex justify-between items-center p-4 max-w-7xl mx-auto relative">
+      <h2 class="text-white font-bold text-2xl tracking-tight">CodeCraft</h2>
+      
+      <input type="checkbox" id="menu-toggle" class="peer hidden">
+
+      <!-- Hamburger Label (Open) -->
+      <label for="menu-toggle" class="md:hidden text-white cursor-pointer select-none peer-checked:hidden transition-transform">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </label>
+
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex space-x-8 text-gray-300 font-medium">
+        <li><a href="#" class="hover:text-white transition">Acerca de</a></li>
+        <li><a href="./registro.html" class="bg-white text-black font-bold py-4 px-10 rounded-full transition-all transform hover:scale-105 shadow-xl shadow-white/5">Ingresa al curso</a></li>
+      </ul>
+
+      <!-- Mobile Menu (Full Screen) -->
+      <div id="mobile-menu" class="fixed inset-0 h-screen w-screen bg-black transition-transform duration-500 ease-in-out translate-y-[-100%] peer-checked:translate-y-0 flex flex-col items-center justify-center p-8 md:hidden z-60">
+        <!-- Close Label -->
+        <label for="menu-toggle" class="absolute top-4 right-4 text-white cursor-pointer select-none">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </label>
+        
+        <ul class="flex flex-col space-y-8 w-full max-w-xs text-center">
+          <li>
+            <a href="#" class="block w-full py-5 text-white border-2 border-white rounded-full font-bold text-lg hover:bg-white hover:text-black transition-all">Acerca de</a>
+          </li>
+          <li>
+            <a href="#" class="block w-full py-5 bg-white text-black border-2 border-white rounded-full font-bold text-lg hover:bg-gray-200 transition-all">Ingresa al curso</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="pt-24 max-w-7xl mx-auto px-4">
+    <section class="relative min-h-[500px] md:min-h-[700px] flex items-center justify-center md:items-end md:justify-start py-20 md:p-20 overflow-hidden">
+      <!-- Background Image Overlay -->
+      <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop" 
+             alt="Background" 
+             class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-[2px]"></div>
+      </div>
+
+      <div class="relative z-10 text-center md:text-left flex flex-col items-center md:items-start max-w-7xl mx-auto px-4 w-full">
+        <h1 class="text-white text-5xl md:text-7xl font-bold mb-6 leading-tight max-w-4xl tracking-tight">
+          Domina CSS desde cero
+        </h1>
+        <p class="text-gray-300 text-lg mb-8 max-w-xl">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, repudiandae totam nesciunt quisquam culpa debitis, reiciendis necessitatibus laborum esse quod inventore impedit.
+        </p>
+        <a href="./registro.html" class="bg-white text-black font-bold py-4 px-10 rounded-full transition-all transform hover:scale-105 shadow-xl shadow-white/5 inline-block">
+          Inscribete ahora
+        </a>
+      </div>
+    </section>
+
+    <section class="py-20">
+      <div class="mb-16">
+        <h2 class="text-white text-4xl font-bold mb-4">Lo que aprenderás</h2>
+        <p class="text-gray-400 max-w-2xl mx-auto">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum perferendis libero alias.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <!-- Card 1 -->
+        <div class="bg-gray-950 p-8 rounded-2xl border border-gray-800 transition-all duration-300 group">
+          <div class="w-14 h-14 flex items-center justify-center mb-2 transition-colors">
+            <img src="./svg/code.svg" alt="" class="w-8 h-8">
+          </div>
+          <h4 class="text-white font-bold text-xl mb-3">Fundamentos de CSS</h4>
+          <p class="text-gray-400 leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-gray-950 p-8 rounded-2xl border border-gray-800 transition-all duration-300 group">
+          <div class="w-14 h-14 flex items-center justify-center mb-2 transition-colors">
+            <img src="./svg/cursor.svg" alt="" class="w-8 h-8">
+          </div>
+          <h4 class="text-white font-bold text-xl mb-3">Técnicas avanzadas</h4>
+          <p class="text-gray-400 leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-gray-950 p-8 rounded-2xl border border-gray-800 transition-all duration-300 group">
+          <div class="w-14 h-14 flex items-center justify-center mb-2 transition-colors">
+            <img src="./svg/file.svg" alt="" class="w-8 h-8">
+          </div>
+          <h4 class="text-white font-bold text-xl mb-3">Proyectos</h4>
+          <p class="text-gray-400 leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-gray-950 p-8 rounded-2xl border border-gray-800 transition-all duration-300 group">
+          <div class="w-14 h-14 flex items-center justify-center mb-2 transition-colors">
+            <img src="./svg/paleta.svg" alt="" class="w-8 h-8">
+          </div>
+          <h4 class="text-white font-bold text-xl mb-3">Responsive</h4>
+          <p class="text-gray-400 leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 border-t border-white/5">
+      <div class="text-center mb-16">
+        <h2 class="text-white text-4xl font-bold mb-4">Lo que dicen nuestros alumnos</h2>
+        <p class="text-gray-400 max-w-2xl mx-auto">Únete a miles de estudiantes que ya han transformado sus habilidades.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto px-4">
+        <!-- Testimony 1 -->
+        <div class="bg-gray-950 p-8 rounded-3xl border border-gray-800 flex flex-col gap-6">
+          <div class="flex gap-1 text-yellow-500">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="text-gray-300 italic">"El mejor curso de CSS que he tomado. Las explicaciones son claras y los proyectos son muy retadores."</p>
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-gray-800 rounded-full"></div>
+            <div>
+              <p class="text-white font-bold">Alex Rivera</p>
+              <p class="text-gray-500 text-sm">Desarrollador Frontend</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimony 2 -->
+        <div class="bg-gray-950 p-8 rounded-3xl border border-gray-800 flex flex-col gap-6">
+          <div class="flex gap-1 text-yellow-500">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="text-gray-300 italic">"Increíble cómo pude pasar de no entender nada a maquetar sitios complejos en solo unas semanas."</p>
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-gray-800 rounded-full"></div>
+            <div>
+              <p class="text-white font-bold">Sofía Méndez</p>
+              <p class="text-gray-500 text-sm">Diseñadora UX/UI</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimony 3 -->
+        <div class="bg-gray-950 p-8 rounded-3xl border border-gray-800 flex flex-col gap-6">
+          <div class="flex gap-1 text-yellow-500">
+            <span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="text-gray-300 italic">"La metodología basada en proyectos es lo que marca la diferencia. Totalmente recomendado."</p>
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-gray-800 rounded-full"></div>
+            <div>
+              <p class="text-white font-bold">Marc Torres</p>
+              <p class="text-gray-500 text-sm">Estudiante de DAW</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="text-gray-400 border-t border-white/10 py-12 mt-6">
+      <div class="max-w-7xl mx-auto flex flex-row md:flex-row items-center gap-6">
+        <div class="flex flex-wrap justify-between gap-6 items-center text-gray-400 text-sm">
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-white transition">Términos y condiciones</a></li>
+            <li><a href="#" class="hover:text-white transition">Política de privacidad</a></li>
+            <li><p>Contáctanos</p></li>
+          </ul>
+          <p>© 2026 Proyecto Landing. Todos los derechos reservados.</p>
+        </div>        
+      </div>
+    </footer>
+  </main>
+
+
+</body>
+</html>
